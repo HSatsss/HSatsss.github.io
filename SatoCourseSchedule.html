@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sato Course Schedule</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+                .main_table{
+                    border-collapse: collapse;
+                    margin: 10px 0;
+                    font-size: 0.9rem;
+                    min-width: 400px;
+                    border: 1px solid #fff;
+                    overflow: hidden;
+                    font-family: "Poppins", sans-serif;
+                    text-align: center;
+                }
+            
+                th, td{
+                    background-color: #dff1e9;
+                    font-size: larger;
+                    color: #26594f;
+                    border: 5px solid #fff;
+                    border-radius: 15px;
+                    width: 12.5%;
+                    height: 50px; 
+                }
+            
+                .main_table thead tr th, .time{
+                    background-color: #26594f;
+                    color: #fff;
+                }
+            
+                .time{
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            
+                .schedule_header{
+                    font-family: "Playfair Display", sans-serif;
+                    font-size: 5rem;
+                    margin: 0;
+                    color: #26594f;
+                }
+            
+                body {
+                    margin: 0;
+                    padding: 0;
+                    background-color: #dff1e9;
+                }
+            
+                .header {
+                   display: block;
+                   width: 100%;
+                   height: auto;
+                }
+            
+                .schedule_table_container{
+                    border: 5px solid #26594f;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 40px 0 0 55px;
+                    padding: 0 10px 0 10px;
+                    max-width: 1400px;
+                    max-height: 1400px;
+                    background-color: #fff;
+                    border-radius: 15px;
+                }
+            
+                .schedule_info{
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: space-evenly;
+                }
+            
+                .course_code{
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            
+                .section_and_room_container{
+                    font-size: 0.8rem;
+                    color: #26594f; 
+                }
+            
+                .schedule_info .section_and_room_container p{
+                    margin: 0;
+                }
+
+
+                /*Table Meaning */
+                
+                .table_meaning_container{
+                    position: absolute;
+                    border: 5px solid #26594f;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 70px 0 0 100px;
+                    padding: 0 10px 0 20px;
+                    max-width: 1300px;
+                    max-height: 1400px;
+                    background-color: #fff;
+                    border-radius: 15px;
+                    top: 1300px;
+                    z-index: 1;
+                    font-family: "Poppins", sans-serif;
+                    text-align: center;
+                }
+
+                .meaning_headers th{
+                    color: white;
+                    background-color:  #26594f;
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    height: 50px;
+                    border-radius: 15px;
+                }
+
+                .meaning_header{
+                    font-family: "Playfair Display", sans-serif;
+                    font-size: 5rem;
+                    margin: 0;
+                    color: #26594f;
+                    text-align: left;
+                }
+
+                .meaning_table{
+                    margin-bottom: 20px;
+                }
+            </style>
+    </head>
+    
+    <body>
+        <img src="images/header.png" alt="header" height="50" class="header">
+        <div class="schedule_table_container">
+            <p class="schedule_header">Class Schedule</p>
+            <table class="main_table" style="width:100%">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+                </thead>
+
+                <tbody class="table_content">
+                    <tr >
+                        <td class="time">7:00 am</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">8:15 am</td>    
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS107</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R411</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">IT103</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R406</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">9:30 am</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS107</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R411</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">IT103</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R406</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">10:45 am</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">12:00 PM</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS122</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R414</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS124</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R307</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">1:15 PM</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS122</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R414</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS124</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R307</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">2:30 PM</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">IT103L</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R601</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS107L</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>602</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">3:45 PM</td>                        
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">HUM039</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>RV406</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS107L</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>602</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">HUM039</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>RV406</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">HUM039</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>RV406</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">5:00 PM</td>                        
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">IT103L</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>R601</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">CS107L</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>602</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">SS086</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>V406</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>
+                            <div class="schedule_info">
+                                <p class="course_code">SS086</p> 
+                                <div class="section_and_room_container">
+                                    <p>A222</p>
+                                    <p>------</p>
+                                    <p>V406</p> 
+                                </div>
+                            </div>
+                        </td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">6:15 PM</td>                        
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">7:30 PM</td>                        
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                    <tr>
+                        <td class="time">8:45 PM</td>                        
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                        <td>---------</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <img src="images/meaning_bg_final.png" alt="background" width="1515px" height="1100px" class="meaning_background">
+    <div class="table_meaning_container">
+        <p class="meaning_header">Table Meanings</p>
+        <table class="meaning_table">
+            <thead>
+                <tr class="meaning_headers">
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Section</th>
+                    <th>Course Professor</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>CS124</td>
+                    <td>Algorithms and Complexity</td>
+                    <td>A222</td>
+                    <td>Martzel Baste</td>
+                </tr>
+
+                <tr>
+                    <td>CS122</td>
+                    <td>Automata and Language Theory</td>
+                    <td>A222</td>
+                    <td>Patrick Cerna</td>
+                </tr>
+
+                <tr>
+                    <td>HUM039</td>
+                    <td>Ethics</td>
+                    <td>A222</td>
+                    <td>Heidgger Jake Diacono</td>
+                </tr>
+
+                <tr>
+                    <td>SS086</td>
+                    <td>Gender and Society</td>
+                    <td>A222</td>
+                    <td>Weila Ignalig</td>
+                </tr>
+
+                <tr>
+                    <td>CS107</td>
+                    <td>Information Management</td>
+                    <td>A222</td>
+                    <td>Martzel Baste</td>
+                </tr>
+
+                <tr>
+                    <td>IT103</td>
+                    <td>Web Programming</td>
+                    <td>A222</td>
+                    <td>Clyde Chester R. Balaman</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    </body>
+</html>

@@ -4,12 +4,15 @@ document.querySelectorAll('.certImg img').forEach(image => {
         const popUpImg = popUp.querySelector('img');
         popUpImg.src = event.target.src;
         popUp.style.display = 'block';
+
+        document.querySelector('nav').style.position = 'relative';
     };
 });
 
 document.querySelector('.popUpImg').addEventListener('click', (event) => {
     if (event.target.tagName !== 'IMG') {
         document.querySelector('.popUpImg').style.display = 'none';
+        document.querySelector('nav').style.position = 'fixed';
     }
 });
 

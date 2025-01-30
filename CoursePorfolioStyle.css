@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Noto+Serif+Hentaigana:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    font-family: 'Noto Serif Hentaigana',sans-serif;
+    overflow-x: hidden;
+    color: rgb(0, 0, 0);
+    gap: 100px;
+}
+
+.mainBody{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+/* Navigation */
+nav{
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+}
+
+.nav_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navButtons{
+    display: flex;
+    gap: 40px;
+}
+
+#navButtons a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    padding: 6px 0;
+    font-size: 20px;
+    
+}
+
+#navButtons a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #20506e;
+    width: 0%;
+    transition: all 0.4s ease;
+}
+
+#navButtons a:hover:before{
+    width: 100%;
+}
+
+/** Typewritter **/
+.introduction{
+    font-size: 20px;
+}
+
+.typewritter{
+    font-size: 50px;
+}
+
+.changingText{
+    font-family: 'Cedarville Cursive', sans-serif;
+}
+
+.introduction .text{
+    position: relative; 
+}
+
+.introduction .text.changingText{
+    position: relative;
+    color: #20506e;
+}
+
+
+.text.changingText:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-left: 2px solid;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+    40%, 60%{
+        left: 100%;
+    }
+
+    100%{
+        left: 0%;
+    }
+}
+
+
+.mainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.socMedLinks a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    text-decoration: none;
+    background-color: white;
+    color: #20506e;
+    border: 0.2rem solid #20506e;
+    border-radius: 100%;
+    transition: 0.2s ease-in-out;
+    font-size: 1.5rem;
+}
+
+.socMedLinks a:hover {
+    background-color: #20506e;
+    color: white;
+    border-color: #20506e;
+}
+
+.porfolioImg img{
+    width: 550px;
+    height: 550px;
+    padding-top: 15px;
+}
+
+#greeting{
+    font-size: 30px;
+    margin: 0;
+}
+
+.shortDesc{
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+    text-align: justify;
+    padding-bottom: 20px
+}
+
+
+/* Projects */
+
+#projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.topContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 50px 50px;
+}
+
+.bottomContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 50px 50px;
+}
+
+.topContainer .card{
+    position: relative;
+    width: 420px;
+    height: 300px;
+    color: #2a5b7a;
+    box-shadow: -4px 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.topContainer .card:hover{
+    height: 500px;
+}
+
+.topContainer .card .imageBox{
+    position:absolute;
+    top: 25px;
+    left: 35px;
+    width: 350px;
+    height: 220px;
+    border-radius: 15px;
+    border: 12px;
+    transition: 0.5s;
+}
+
+.topContainer .card .imageBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.topContainer .card:hover .imageBox{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);;
+}
+
+.topContainer .card .content{
+    position: absolute;
+    top: 230px;
+    left: -20px;
+    width: 400px;
+    padding: 0 30px;
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.topContainer .card:hover .content{
+    height: 500px;
+}
+
+
+
+.bottomContainer .card{
+    position: relative;
+    width: 420px;
+    height: 300px;
+    color: #2a5b7a;
+    box-shadow: -4px 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.bottomContainer .card:hover{
+    height: 500px;
+}
+
+.bottomContainer .card .imageBox{
+    position:absolute;
+    top: 25px;
+    left: 35px;
+    width: 350px;
+    height: 220px;
+    border-radius: 15px;
+    border: 12px;
+    transition: 0.5s;
+}
+
+.bottomContainer .card .imageBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottomContainer .card:hover .imageBox{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);;
+}
+
+.bottomContainer .card .content{
+    position: absolute;
+    top: 230px;
+    left: -20px;
+    width: 400px;
+    padding: 0 30px;
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.bottomContainer .card:hover .content{
+    height: 500px;
+}
+
+
+
+/* Container Buttons */
+.cardContainer .topContainer .content a{
+    display: inline-block;
+    color: white;
+    padding: 12px 25px;
+    background-color: rgba(255, 169, 10, 0.944);
+    text-decoration: none;  
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cardContainer .topContainer .content a:hover{
+    color: rgba(255, 169, 10, 0.944);
+    background-color: white;
+}
+
+
+.cardContainer .bottomContainer .content a{
+    display: inline-block;
+    color: white;
+    padding: 12px 25px;
+    background-color: rgba(255, 169, 10, 0.944);
+    text-decoration: none;  
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cardContainer .bottomContainer .content a:hover{
+    color: rgba(255, 169, 10, 0.944);
+    background-color: white;
+}
+
+.content h2{
+    font-size: 25px;
+}
+.title{
+    text-align: center;
+    font-size: 50px;
+    margin: 40px;
+}
+
+
+/* Affiliations */
+.affiliationsContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.affBox{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    box-shadow: -4px 4cap 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.affBox:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.affBox .imgBox{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.affBox .imgBox img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    transition: 0.5s;
+}
+
+
+
+.affBox:hover .imgBox img{
+    opacity: 0;
+    transform: translateY(-20px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.affBox:hover{
+    background-color: #20506e;
+}
+
+
+
+.affBox .content{
+    display: flex;
+    opacity: 0;
+    margin: 0 0 0 20px;
+    width: 260px;
+    text-align: center;
+    justify-content: center;
+}
+
+.affBox:hover .content{
+    display: flex;
+    opacity: 100%;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.affBox:hover{
+    background-color: #20506e;
+}
+
+
+/* Certfication */
+.certifications{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 100px;
+}
+
+.certContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px; 
+    margin: 50px;
+}
+
+.cerBox{
+    position: relative;
+    width: 420px;
+    height: 300px;
+    color: #2a5b7a;
+    box-shadow: -4px 20px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.cerBox:hover{
+    transform: translateY(-20px);
+}
+
+
+.cerBox .certImg{
+    position:absolute;
+    top: 25px;
+    left: 35px;
+    width: 350px;
+    height: 220px;
+    border-radius: 15px;
+    border: 12px;
+    transition: 0.5s;
+}
+
+.cerBox .certImg img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.cerBox .certTitle{
+    position: absolute;
+    top: 240px;
+    left: -20px;
+    width: 400px;
+    padding: 0 30px;
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+
+.content h2{
+    font-size: 25px;
+}
+.title{
+    text-align: center;
+    font-size: 50px;
+    margin: 40px;
+}
+
+.popUpImg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUpImg .popup-content{
+    display: flex;
+    justify-content: center;
+    align-items: centers;
+}
+
+.popUpImg .popup-image{
+    max-width: 600px;
+    height:auto;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-top: 100px;
+}
+
+.popUpImg .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* Achievements */
+#achievements{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.achievementsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.achievementsContainer .achCard{
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    box-shadow: -4px 4cap 40px rgba(0, 0, 0, 0.2);
+}
+
+.achievementsContainer .achCard .front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color:white;
+    color: white;
+    border-radius: 20px;
+}
+
+.achievementsContainer .achCard .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: rgb(22, 36, 60);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+}
+
+
+.achievementsContainer .achCard:hover{
+    transform: rotateY(180deg);
+}
+
+.achievementsContainer .achCard .front .achImgContainer{
+    position:absolute;
+    top: 25px;
+    left: 20px;
+    width: 350px;
+    height: 220px;
+    border-radius: 15px;
+    border: 12px;
+    transition: 0.5s;
+}
+
+
+.achievementsContainer .achCard .front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.achievementsContainer .achCard .front .content{
+    position:absolute;
+    top: 300px;
+    width: 350px;
+    height: 200px;
+    text-align: center;  
+    background-color: #2b678d;  
+    width: 100%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0 -20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.achievementsContainer .achCard .front .achievementName{
+    text-align: center;  
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 40px;
+}
+
+.achievementsContainer .achCard .back{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Contacts */

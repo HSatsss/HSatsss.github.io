@@ -674,6 +674,9 @@ nav{
 }
 
 /* Contacts */
+#contacts{
+    margin-bottom: 50px;
+}
 .mainContacsContainer{
     display: flex;
     flex-direction: row;

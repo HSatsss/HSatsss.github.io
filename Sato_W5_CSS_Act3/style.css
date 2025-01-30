@@ -1,0 +1,22 @@
+body{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+.container-1{
+    width: 100px;
+    height: 100px;
+    border: 20px rgb(177, 13, 175) solid;
+    background-color: red;
+}
+
+.container-2{
+    margin-top: 40px;
+    width: 100px;
+    height: 100px;
+    border: 20px rgb(177, 13, 175) solid;
+    background-color: blue;
+}
+
+h1{
+    padding-left: 10px;
+}

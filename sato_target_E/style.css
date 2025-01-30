@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(99, 95, 95);
+    margin: 0;
+    height: 100vh;
+}
+
+.aboveContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+     background-color: rgb(99, 95, 95);
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#mainContainer{
+    display: flex;
+    flex-direction: column;  
+    width: 100%;  
+    margin: 0;
+}
+
+#sideBar{
+    background-color: rgb(149, 28, 103);
+    width: 250px;
+    height: 645px;
+    margin:0;
+}
+
+
+#footer{
+    background-color: rgb(28, 36, 149);
+    width: 100%;
+    height: 50px;
+    align-items: flex-end;
+}
+
+#topContainer{  
+    background-color: rgb(186, 186, 186);
+    width: 1235px;
+    height: 240px;
+    margin-top: 45px;
+    margin-right: 25px;
+    margin-left: 20px;
+    
+}
+
+.bottomContainer{
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1260px;
+    margin-top: 25px;
+    margin-left: 6px;
+}
+
+
+
+#containerItem1, #containerItem2, #containerItem3 {
+    background-color: rgb(186, 186, 186);
+    height: 300px; 
+    margin: 15px; 
+}
+
+#containerItem1, #containerItem3{
+    width: 360px;
+}
+
+#containerItem2{
+    width: 750px; 
+}

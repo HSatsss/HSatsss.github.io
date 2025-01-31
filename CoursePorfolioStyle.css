@@ -252,7 +252,7 @@ nav{
 .topContainer .card .content{
     position: absolute;
     top: 206px;
-    left: -25px;
+    left: -15px;
     width: 360px;
     padding: 0 30px;
     height: 80px;
@@ -311,7 +311,7 @@ nav{
 .bottomContainer .card .content{
     position: absolute;
     top: 206px;
-    left: -25px;
+    left: -15px;
     width: 360px;
     padding: 0 30px;
     height: 80px;
